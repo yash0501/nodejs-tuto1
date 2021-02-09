@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Movie Details by Name</title>
+</head>
+<body>
+    <h1>Search Movie Details by Name</h1>
+
+    <div class="form">
+        <form action="/movies" method="POST">
+        <label for="title">Enter Movie Name:</label>
+        <input type="text" id="title" name="title">
+        <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <% if(info.length !== 0){ %>
+        <!--<% info[0].Search.forEach((movie)=>{ %>-->
+            <div>
+                <!--<h3><%= movie.Title %></h3>
+                <a href=<%=`${movie.Poster}`%>>Poster Link</a>-->
+                <p><%= info %></p>
+            </div>
+        <!--<% }) %>-->
+    <% } %>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST demo</title>
+</head>
+<body>
+    <div class="main">
+        <h1>List of Books</h1>
+        <ul>
+            <% books.forEach((book)=>{ %>
+                <li><%= `${book.title} - ${book.author}` %></li>
+            <% }) %>
+        </ul>
+        <form action="/books" method="post">
+            <input type="text" placeholder="Book Title" name="title" autofocus>
+            <input type="text" placeholder="Book Author" name="author" autofocus>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<%- include("partials/header") %>
+<h1>Satisfied Customers</h1>
+<ul>
+    <% for( let i=0 ; i<customer.length ; i++){ %>
+    <li>Customer <%= (i+1) %>: <%= customer[i] %></li>
+    <% } %>
+</ul>
+<%- include("partials/footer") %>
